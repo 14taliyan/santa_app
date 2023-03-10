@@ -1,7 +1,11 @@
 pipeline{
     agent any
     stages{
-        
+        stage("build"){
+        steps{
+            sh 'npm insall'
+            sh 'npm build'
+        }
         stage("build"){
         steps{
             echo "building the application...."
@@ -16,4 +20,4 @@ pipeline{
     }
 }
 }
-
+}
